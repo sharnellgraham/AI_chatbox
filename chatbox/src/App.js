@@ -34,3 +34,6 @@ function App() {
       },
       body: `{"query": "${addAsk}"}`,
     };
+
+    await fetch("https://chatgpt-api7.p.rapidapi.com/ask", options)
+      .then((response) => response.json())

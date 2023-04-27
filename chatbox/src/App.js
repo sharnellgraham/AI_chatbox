@@ -82,4 +82,18 @@ function App() {
                       className={
                         ans.role === "Assistant" ? "chatCont" : "chatContUser"
                       }
-                    ></div>            
+                    >           
+                    <p
+                        className={
+                          ans.role === "User"
+                            ? "user chatStyle"
+                            : "assistant chatStyle"
+                        }
+                      >
+                        {ans.responsed}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })
+            ) :

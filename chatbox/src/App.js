@@ -37,3 +37,17 @@ function App() {
 
     await fetch("https://chatgpt-api7.p.rapidapi.com/ask", options)
       .then((response) => response.json())
+      .then((response) => {
+        console.log(response.response);
+        setAns((preAns) => [
+          {
+            responsed: response.response,
+            role: "Assistant",
+          },
+          ...preAns,
+        ]);
+      })
+      .catch((err) => console.error(err));
+
+    setTyping(false);
+  };

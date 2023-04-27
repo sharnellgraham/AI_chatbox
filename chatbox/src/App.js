@@ -101,3 +101,24 @@ function App() {
             )}
             <div ref={messageEnd} />
           </div>
+          </ul>
+        <div className="addPost">
+          <input
+            type="text"
+            value={addAsk}
+            placeholder="Lets chat =]"
+            onChange={(e) => setAsk(e.target.value)}
+            onKeyDown={saveEnter}
+          />
+          <button
+            className='sendBtn'
+            onClick={handleAdd}
+            disabled={!addAsk}
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </>
+  );
+}

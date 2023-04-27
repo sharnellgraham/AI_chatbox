@@ -51,3 +51,9 @@ function App() {
 
     setTyping(false);
   };
+
+  const saveEnter = (e) => {
+    if (e.key === "Enter") {
+      handleAdd();
+    }
+  };

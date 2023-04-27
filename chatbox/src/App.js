@@ -7,3 +7,23 @@ function App() {
   const [addAsk, setAsk] = useState("");
 
   const [typing, setTyping] = useState(false);
+
+  const handleAdd = async () => {
+    setTimeout(() => {
+      setAns((preAns) => [
+        {
+          responsed: addAsk,
+          role: "User",
+        },
+        ...preAns,
+      ]);
+    }, 250);
+
+    setAsk("");
+
+    setTimeout(() => {
+      setTyping(true);
+    }, 800);
+
+  }
+}

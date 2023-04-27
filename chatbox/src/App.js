@@ -57,3 +57,20 @@ function App() {
       handleAdd();
     }
   };
+
+  return (
+    <>
+      <div className="apiApp">
+        <ul className='chatContainer'>
+          <div className="chatSec">
+            {typing && (
+              <div className="chat">
+                <div className="chatCont">
+                  <div className="assistant typing">
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                  </div>
+                </div>
+              </div>
+            )}

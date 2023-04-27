@@ -96,4 +96,8 @@ function App() {
                   </div>
                 );
               })
-            ) :
+            ) :(
+              <p style={{ margin: "0 auto" }}>Hello  🙂</p>
+            )}
+            <div ref={messageEnd} />
+          </div>

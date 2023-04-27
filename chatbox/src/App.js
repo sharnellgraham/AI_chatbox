@@ -74,3 +74,12 @@ function App() {
                 </div>
               </div>
             )}
+          {ans.length > 0 ? (
+              ans.map((ans, index) => {
+                return (
+                  <div className="chat" key={index}>
+                    <div
+                      className={
+                        ans.role === "Assistant" ? "chatCont" : "chatContUser"
+                      }
+                    ></div>            

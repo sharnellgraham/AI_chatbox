@@ -71,3 +71,18 @@
   height: 8px;
   margin-right: 4px;
 }
+
+/* Styles for add post container */
+.addPost {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Styles for input field */
+.addPost input[type="text"] {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

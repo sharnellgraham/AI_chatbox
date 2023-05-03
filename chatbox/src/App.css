@@ -18,3 +18,15 @@
   overflow-y: scroll;
   height: 300px;
 }
+
+/* Styles for the chat section */
+.chatSec {
+  padding: 10px;
+}
+
+/* Styles for the chat */
+.chat {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}

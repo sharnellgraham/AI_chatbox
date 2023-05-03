@@ -44,3 +44,15 @@
   border-radius: 5px;
   padding: 10px;
 }
+
+/* Styles for user chat text */
+.user.chatStyle {
+  margin: 0;
+  color: #000;
+}
+
+/* Styles for assistant chat text */
+.assistant.chatStyle {
+  margin: 0;
+  color: #000;
+}

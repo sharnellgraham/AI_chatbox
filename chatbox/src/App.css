@@ -56,3 +56,18 @@
   margin: 0;
   color: #000;
 }
+
+/* Styles for assistant typing animation */
+.assistant.typing {
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for dot in typing animation */
+.dot {
+  background-color: #bbb;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+}

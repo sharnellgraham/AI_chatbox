@@ -30,3 +30,17 @@
   justify-content: flex-start;
   margin-bottom: 10px;
 }
+
+/* Styles for user chat container */
+.chatCont {
+  background-color: #f1f0f0;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Styles for assistant chat container */
+.chatContUser {
+  background-color: #b2d7ff;
+  border-radius: 5px;
+  padding: 10px;
+}

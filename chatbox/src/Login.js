@@ -9,3 +9,12 @@ function Login() {
   // Setting up error states for username and password using useState hook
   const [usernameError, setUsernameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+
+   // UseEffect to check if username is empty and update the usernameError state accordingly
+   useEffect(() => {
+    if (username.trim() === "") {
+      setUsernameError("Username is required");
+    } else {
+      setUsernameError("");
+    }
+  }, [username]);

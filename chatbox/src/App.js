@@ -106,7 +106,7 @@ function App() {
           <input
             type="text"
             value={addAsk}
-            placeholder="Lets chat =]"
+            placeholder="Lets chat 🙂"
             onChange={(e) => setAsk(e.target.value)}
             onKeyDown={saveEnter}
           />

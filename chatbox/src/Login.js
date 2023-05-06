@@ -27,3 +27,21 @@ function Login() {
           setPasswordError("");
         }
       }, [password]);
+ 
+      // This HandleSubmit function which runs when the form is submitted
+ const handleSubmit = (e) => {
+    e.preventDefault();
+
+     // Rendering the form with inputs and submit button
+  return (
+    <div>
+      <h1>Login</h1>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />

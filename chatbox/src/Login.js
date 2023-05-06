@@ -18,3 +18,12 @@ function Login() {
       setUsernameError("");
     }
   }, [username]);
+
+    // UseEffect to check if password is empty and update the passwordError state accordingly
+    useEffect(() => {
+        if (password.trim() === "") {
+          setPasswordError("Password is required");
+        } else {
+          setPasswordError("");
+        }
+      }, [password]);

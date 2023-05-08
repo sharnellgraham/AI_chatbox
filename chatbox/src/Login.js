@@ -45,3 +45,22 @@ function Login() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
+             <p>{usernameError}</p>
+        </div>
+        <div>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <p>{passwordError}</p>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  );
+}
+
+export default Login;

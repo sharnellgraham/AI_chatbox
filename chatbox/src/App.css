@@ -86,7 +86,7 @@ button {
 
 ul.chatContainer {
   margin: 50px !important;
-  height: 400px; /* Updated height for the chat container */
+  height: 400\px; /* Updated height for the chat container */
   width: 10%; /* Updated width for the chat container */
   display: flex;
   background: linear-gradient(rgb(255, 0, 0), rgb(255, 247, 0)) padding-box, linear-gradient(to right, #ff0000c4, rgb(0, 0, 255)) border-box;

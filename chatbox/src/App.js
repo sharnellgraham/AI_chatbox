@@ -1,13 +1,18 @@
 import './App.css';
-import { useState, useRef } from "react";
+import { useState, useRef,  } from "react";
+import IntroPage from "./IntroPage";
+
+
+
+
 
 function App() {
   const messageEnd = useRef(null);
   const [ans, setAns] = useState([]);
   const [addAsk, setAsk] = useState("");
-
   const [typing, setTyping] = useState(false);
-
+  const [showIntro, setShowIntro] = useState(true);
+  
   const handleAdd = async () => {
     setTimeout(() => {
       setAns((preAns) => [
@@ -52,75 +57,87 @@ function App() {
     setTyping(false);
   };
 
+  const handleIntroDismiss = () => {
+    setShowIntro(false);
+  };
+
+
   const saveEnter = (e) => {
     if (e.key === "Enter") {
       handleAdd();
     }
   };
 
+ 
+
   return (
     <>
-      <div className="apiApp">
-        <ul className='chatContainer'>
-          <div className="chatSec">
-            {typing && (
-              <div className="chat">
-                <div className="chatCont">
-                  <div className="assistant typing">
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                  </div>
-                </div>
-              </div>
-            )}
-          {ans.length > 0 ? (
-              ans.map((ans, index) => {
-                return (
-                  <div className="chat" key={index}>
-                    <div
-                      className={
-                        ans.role === "Assistant" ? "chatCont" : "chatContUser"
-                      }
-                    >           
-                    <p
-                        className={
-                          ans.role === "User"
-                            ? "user chatStyle"
-                            : "assistant chatStyle"
-                        }
-                      >
-                        {ans.responsed}
-                      </p>
+      {showIntro ? (
+        <IntroPage onDismiss={handleIntroDismiss} />
+      ) : (
+        <div className="apiApp">
+          <ul className='chatContainer'>
+            <div className="chatSec">
+              {typing && (
+                <div className="chat">
+                  <div className="chatCont">
+                    <div className="assistant typing">
+                      <div className="dot"></div>
+                      <div className="dot"></div>
+                      <div className="dot"></div>
                     </div>
                   </div>
-                );
-              })
-            ) :(
-              <p style={{ margin: "0 auto" }}>Hello  🙂</p>
-            )}
-            <div ref={messageEnd} />
-          </div>
+                </div>
+              )}
+              {ans.length > 0 ? (
+                ans.map((ans, index) => {
+                  return (
+                    <div className="chat" key={index}>
+                      <div
+                        className={
+                          ans.role === "Assistant" ? "chatCont" : "chatContUser"
+                        }
+                      >           
+                      <p
+                          className={
+                            ans.role === "User"
+                              ? "user chatStyle"
+                              : "assistant chatStyle"
+                          }
+                        >
+                          {ans.responsed}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })
+              ) : (
+                <p style={{ margin: "0 auto" }}>Hello  🙂</p>
+              )}
+              <div ref={messageEnd} />
+            </div>
           </ul>
-        <div className="addPost">
-          <input
-            type="text"
-            value={addAsk}
-            placeholder="Lets chat 🙂"
-            onChange={(e) => setAsk(e.target.value)}
-            onKeyDown={saveEnter}
-          />
-          <button
-            className='sendBtn'
-            onClick={handleAdd}
-            disabled={!addAsk}
-          >
-            Send
-          </button>
+          <div className="addPost">
+            <input
+              type="text"
+              value={addAsk}
+              placeholder="Lets chat :)"
+              onChange={(e) => setAsk(e.target.value)}
+              onKeyDown={saveEnter}
+            />
+            <button
+              className='sendBtn'
+              onClick={handleAdd}
+              disabled={!addAsk}
+            >
+              Send
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
+  
 }
 
 export default App;

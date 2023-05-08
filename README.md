@@ -27,7 +27,6 @@ Chatbox is a web application that allows users to have conversations with an AI 
 
 - Real-time messaging: Messages are sent and received instantly without requiring a page refresh.
 - Typing indicator: When the assistant is processing a message, a typing indicator is displayed to indicate that a response is being generated.
-- Message history: The chatbox keeps track of previous messages and displays them in the conversation history.
 - User-friendly interface: The chatbox has a clean and intuitive interface for ease of use.
 
 ## API Integration

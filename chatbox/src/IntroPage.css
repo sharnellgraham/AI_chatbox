@@ -4,13 +4,117 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #fff;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+  .chatbot-image {
+    width: 200px;
+    height: 200px;
   }
   
   .introPage h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #000;
+    color: #000000;
     margin-bottom: 1rem;
+    overflow: hidden;
+    display: inline-block;
   }
+  
+  .introPage h1 span {
+    display: inline-block;
+    animation-name: fall-in;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  
+  .introPage h1 span:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .introPage h1 span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .introPage h1 span:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .introPage h1 span:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  .introPage h1 span:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  
+  .introPage h1 span:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  
+  .introPage h1 span:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  
+  @keyframes fall-in {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+  .introPage button {
+    padding: 1rem 2rem;
+    background-color: #fff;
+    color: #444;
+    border: 2px solid #444;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background: linear-gradient(90deg, #0044ff, #FF5F6D, #00c628);
+    background-size: 200% auto;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    margin-left: 10px;
+    animation: gradientAnimation 2s linear infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+  
+  .introPage button:hover {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .introPage button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(68, 68, 68, 0.4);
+  }
+
+
   

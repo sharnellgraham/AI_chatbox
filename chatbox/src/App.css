@@ -1,6 +1,11 @@
 .dancing-robot {
-  margin-top: -185px;
+  position: absolute;
+  bottom: -85px;
+  left: -1;
+  width: 200px;
+  height: 200px;
 }
+
 
 body {
   margin: 0;
@@ -89,8 +94,7 @@ ul.chatContainer {
   height: 400\px; /* Updated height for the chat container */
   width: 10%; /* Updated width for the chat container */
   display: flex;
-  background: linear-gradient(rgb(255, 0, 0), rgb(255, 247, 0)) padding-box, linear-gradient(to right, #ff0000c4, rgb(0, 0, 255)) border-box;
-  border-radius: 15px;
+  background: white;
   padding: 0 !important;
   border: 4px solid transparent;
 }
@@ -323,3 +327,41 @@ body {
     width: 90px;
   }
 
+/* For phones smaller than 480px */
+@media only screen and (max-width: 480px) {
+  .chatbot {
+    /* Adjust styles for chatbot container */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+  }
+}
+
+/* For phones between 480px and 768px */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .chatbot {
+    /* Adjust styles for chatbot container */
+    width: 90%;
+    height: 80%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+  }
+}
+
+/* For tablets and larger screens */
+@media only screen and (min-width: 768px) {
+  .chatbot {
+    /* Adjust styles for chatbot container */
+    width: 400px;
+    height: 500px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+  }
+}

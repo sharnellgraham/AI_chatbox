@@ -112,7 +112,20 @@ function App() {
                   );
                 })
               ) : (
-                <p style={{ margin: "0 auto" }}>Hello  🙂</p>
+                <p style={{ margin: "0 auto" }}>
+                <strong>"Ask me anything!"</strong><br />
+                <strong>"What would you like to know about?"</strong><br />
+                <strong>"I can help with a variety of topics - try asking about science, history, or literature."</strong><br />
+                <strong>"Do you need help with a specific problem or situation?"</strong><br />
+                <strong>"Tell me about your day - I'm here to chat!"</strong><br />
+                <strong>"I can also recommend books, movies, or TV shows - want a suggestion?"</strong><br />
+                <strong>"Curious about a particular topic? Ask me and I'll do my best to answer!"</strong><br />
+                <strong>"Need some advice or just want to vent? I'm here to listen."</strong><br />
+                <strong>"Let's have a conversation! What's on your mind?"</strong><br />
+                <strong>"I can also tell jokes or fun facts - want to hear one?"</strong>
+              </p>
+              
+              
               )}
               <div ref={messageEnd} />
             </div>

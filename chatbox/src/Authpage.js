@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './Authpage.css';
+
 
 const AuthPage = ({ onAuthentication }) => {
   const [email, setEmail] = useState('');

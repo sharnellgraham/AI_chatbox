@@ -30,29 +30,31 @@ ul.chatContainer {
   overflow: auto;
 }
 
+/* Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 8px;
+  background-color: #fff; /* Set scrollbar background color to white */
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f5f8fa;
+  background-color: #fff; /* Set track background color to white */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1da1f2;
+  background-color: #fff; /* Set thumb background color to white */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #0c8bd6;
+  background-color: #fff !important; /* Set hover background color to white */
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background-color: #086c9f;
+  background-color: #fff !important; /* Set active background color to white */
 }
 
 ::-webkit-scrollbar-corner {
-  background-color: #f5f8fa;
+  background-color: #fff !important; /* Set corner background color to white */
 }
 
 ::-webkit-scrollbar-thumb:vertical {
@@ -60,11 +62,11 @@ ul.chatContainer {
 }
 
 ::-webkit-scrollbar-thumb:vertical:hover {
-  background-color: #0c8bd6;
+  background-color: #fff; /* Set vertical hover background color to white */
 }
 
 ::-webkit-scrollbar-thumb:vertical:active {
-  background-color: #086c9f;
+  background-color: #fff; /* Set vertical active background color to white */
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
@@ -72,12 +74,14 @@ ul.chatContainer {
 }
 
 ::-webkit-scrollbar-thumb:horizontal:hover {
-  background-color: #0c8bd6;
+  background-color: #fff; /* Set horizontal hover background color to white */
 }
 
 ::-webkit-scrollbar-thumb:horizontal:active {
-  background-color: #086c9f;
+  background-color: #fff; /* Set horizontal active background color to white */
 }
+
+
 
 /* Chatbot and Dancing Robot */
 .chatbot {

@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./IntroPage.css";
 
 function IntroPage({ onDismiss }) {
   const handleImageClick = () => {
     onDismiss();
+    playWelcomeAudio();
+  };
+
+  const [audioPlayed, setAudioPlayed] = useState(false);
+
+  const playWelcomeAudio = () => {
+    const audio = new Audio("/audio/welcome.mp3"); 
+    audio.play();
+    setAudioPlayed(true);
   };
 
   return (
@@ -24,7 +33,8 @@ function IntroPage({ onDismiss }) {
         <span>M</span>
         <span>E</span>
       </h1>
-      <p>When you're ready, click robot   to begin</p>
+      <p>When you're ready, click the robot to begin</p>
+
      
     </div>
   );

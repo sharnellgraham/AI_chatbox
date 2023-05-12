@@ -1,30 +1,32 @@
-.dancing-robot {
-  position: absolute;
-  bottom: -85px;
-  left: -1;
-  width: 200px;
-  height: 200px;
- 
+/* General Styles */
+* {
+  box-sizing: border-box;
 }
 
-@keyframes Gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+input,
+input:active,
+input:focus,
+button {
+  outline: none;
 }
 
-.chatContainer {
-  list-style-type: none;
+button {
+  border: none;
+}
+
+body {
   margin: 0;
-  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  height: 100vh;
+}
+
+/* Chat Container */
+ul.chatContainer {
+  height: 68vh;
   width: 100%;
-  max-width: 600px;
+  background: #fff;
   overflow: auto;
 }
 
@@ -77,18 +79,23 @@
   background-color: #086c9f;
 }
 
-
-input,
-input:active,
-input:focus,
-button {
-  outline: none;
+/* Chatbot and Dancing Robot */
+.chatbot {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0;
 }
 
-button {
-  border: none;
+.dancing-robot {
+  width: 150px;
+  height: 150px;
+  bottom: -50px;
 }
 
+/* Chat Styles */
 .apiApp {
   width: 100%;
   height: 100%;
@@ -116,7 +123,7 @@ button {
 .addPost textarea {
   padding-left: 20px;
   width: 600px;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   border-radius: 5px;
   font-family: monospace;
 }
@@ -145,7 +152,7 @@ button {
   scroll-behavior: smooth;
   border-radius: 15px;
   padding: 15px;
-  background: #ffffff;
+  background: #fff;
 }
 
 .chatCont {
@@ -158,9 +165,8 @@ button {
 }
 
 .typing .dot {
-  animation: mercuryTypingAnimatio 1.8s infinite ease-in-out;
-  background-color: #ffffff;
-  /* background-color: #6cad96; */
+  animation: mercuryTypingAnimation 1.8s infinite ease-in-out;
+  background-color: #fff;
   border-radius: 50%;
   height: 10px;
   margin-right: 4px;
@@ -168,63 +174,58 @@ button {
   width: 10px;
   display: inline-block;
 }
+
 .typing .dot:nth-child(1) {
   animation-delay: 200ms;
 }
+
 .typing .dot:nth-child(2) {
   animation-delay: 300ms;
 }
+
 .typing .dot:nth-child(3) {
   animation-delay: 400ms;
 }
+
 .typing .dot:last-child {
   margin-right: 0;
 }
 
-@keyframes mercuryTypingAnimatio {
+@keyframes mercuryTypingAnimation {
   0% {
     transform: translateY(0px);
-    /* background-color: #6cad96; */
   }
   28% {
     transform: translateY(-7px);
-    /* background-color: #9ecab9; */
   }
   44% {
     transform: translateY(0px);
-    /* background-color: #b5d9cb; */
   }
 }
-  
-  ul.chatContainer {
-  height: 68vh;
-  width: 100%;
-  background: #ffffff;
-  }
-  
-  .addPost input {
+
+.addPost input {
   padding-left: 10px;
   width: 230px;
-  }
-  
-  .showAvatarSec {
+}
+
+.showAvatarSec {
   margin-top: -10px;
-  }
-  
-  .chatStyle,
-  .typing {
+}
+
+.chatStyle,
+.typing {
   margin-top: 10px;
-  }
-  
-  .sendBtn {
+}
+
+.sendBtn {
   width: 90px;
-  }
-  
-  button:disabled {
+}
+
+button:disabled {
   opacity: 0.3;
-  }
-  
-  .sendBtn {
+}
+
+.sendBtn {
   background-color: rgb(1, 190, 1);
   height: 40px;
   width: 100px;
@@ -232,66 +233,64 @@ button {
   color: white;
   border-radius: 6px;
   font-family: monospace;
-  }
-  
-  .user {
+}
+
+.user {
   text-align: right;
   background-color: #8bc6ec;
   background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
   border-radius: 17px;
   border-bottom-right-radius: 2px;
-  }
-  
-  .assistant {
+}
+
+.assistant {
   text-align: left;
   background-color: #ff9a8b;
   background-image: linear-gradient(90.deg, #fc8371 0%, #ff8ea5f1 55%, #ff7e96 100%);
   border-radius: 17px;
   border-top-left-radius: 2px;
-  }
-  
-  /* Gradient animation */
-  .body {
-  background-color: #ffffff;
-  }
-  
-  body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: white;
-  height: 100vh;
-  }
-  
-  @media only screen and (max-width: 480px) {
+}
+
+/* Media Queries */
+@media only screen and (max-width: 480px) {
   .chatbot {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0;
   }
+
+  .dancing-robot {
+    width: 150px;
+    height: 150px;
+    bottom: -50px;
   }
-  
-  @media only screen and (min-width: 480px) and (max-width: 768px) {
+
+  ul.chatContainer {
+    height: 68vh;
+    width: 100%;
+    background: #fff;
+  }
+
+  .addPost input {
+    padding-left: 10px;
+    width: 230px;
+  }
+
+  .chatStyle,
+  .typing {
+    margin-top: 10px;
+  }
+
+  .sendBtn {
+    width: 90px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .chatbot {
-  width: 90%;
-  height: 80%;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 0;
+    width: 90
   }
-  }
-  
-  @media only screen and (min-width: 768px) {
-  .chatbot {
-  width: 400px;
-  height: 500px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  margin: 0;
-  }
-  }
+}

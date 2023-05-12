@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './Authpage.css';
 
-
 const AuthPage = ({ onAuthentication }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [isRegisterMode, setRegisterMode] = useState(false);
+  const [error, setError] = useState('');
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -15,33 +16,42 @@ const AuthPage = ({ onAuthentication }) => {
     setPassword(e.target.value);
   };
 
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    //  authentication logic based on the form mode (login or registration)
     if (isRegisterMode) {
       // Registration logic
-      
+      if (password !== confirmPassword) {
+        setError('Passwords do not match');
+        return;
+      }
+
+      // Additional validation logic for email and password fields can be added here
 
       console.log('Registration:', email, password);
-      // Call the authentication callback to update the authentication status in the App component
       onAuthentication(true);
     } else {
       // Login logic
-      //
-      // 
+      // Additional validation logic for email and password fields can be added here
+
       console.log('Login:', email, password);
-      // Call the authentication callback to update the authentication status in the App component
       onAuthentication(true);
     }
 
-    // Reset form fields
+    // Reset form fields and error state
     setEmail('');
     setPassword('');
+    setConfirmPassword('');
+    setError('');
   };
 
   const toggleMode = () => {
     setRegisterMode(!isRegisterMode);
+    setError('');
   };
 
   return (
@@ -52,6 +62,13 @@ const AuthPage = ({ onAuthentication }) => {
         <input type="email" value={email} onChange={handleEmailChange} required />
         <label>Password:</label>
         <input type="password" value={password} onChange={handlePasswordChange} required />
+        {isRegisterMode && (
+          <>
+            <label>Confirm Password:</label>
+            <input type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} required />
+          </>
+        )}
+        {error && <p className="error-message">{error}</p>}
         <button type="submit">{isRegisterMode ? 'Register' : 'Login'}</button>
       </form>
       <p>

@@ -30,56 +30,8 @@ ul.chatContainer {
   overflow: auto;
 }
 
-/* Scrollbar Styles */
-::-webkit-scrollbar {
-  width: 8px;
-  background-color: #fff; /* Set scrollbar background color to white */
-}
 
-::-webkit-scrollbar-track {
-  background-color: #fff; /* Set track background color to white */
-}
 
-::-webkit-scrollbar-thumb {
-  background-color: #fff; /* Set thumb background color to white */
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #fff !important; /* Set hover background color to white */
-}
-
-::-webkit-scrollbar-thumb:active {
-  background-color: #fff !important; /* Set active background color to white */
-}
-
-::-webkit-scrollbar-corner {
-  background-color: #fff !important; /* Set corner background color to white */
-}
-
-::-webkit-scrollbar-thumb:vertical {
-  transition: background-color 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:vertical:hover {
-  background-color: #fff; /* Set vertical hover background color to white */
-}
-
-::-webkit-scrollbar-thumb:vertical:active {
-  background-color: #fff; /* Set vertical active background color to white */
-}
-
-::-webkit-scrollbar-thumb:horizontal {
-  transition: background-color 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:horizontal:hover {
-  background-color: #fff; /* Set horizontal hover background color to white */
-}
-
-::-webkit-scrollbar-thumb:horizontal:active {
-  background-color: #fff; /* Set horizontal active background color to white */
-}
 
 
 

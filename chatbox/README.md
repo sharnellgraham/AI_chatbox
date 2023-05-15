@@ -2,7 +2,7 @@
 
 Chatbox is a web application that allows users to have conversations with an AI assistant in real-time. The application provides a user-friendly interface where users can enter their messages and receive responses from the assistant. This README provides an overview of the code and instructions for running the application.
 
-![Alt Text](https://ibb.co/rfc7prm)
+![Alt Text](https://i.ibb.co/wrw0QmR/Screen-Shot-2023-05-15-at-5-56-22-PM.png)
 
 
 ## Technologies Used

@@ -1,10 +1,7 @@
 import './App.css';
-import { useState, useRef,  } from "react";
+import { useState, useRef,useEffect  } from "react";
 import IntroPage from "./IntroPage";
 import AuthPage from "./Authpage";
-
-
-
 
 
 
@@ -15,6 +12,7 @@ function App() {
   const [typing, setTyping] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
   const [isAuthenticated, setAuthenticated] = useState(false);
+  const [randomMessage, setRandomMessage] = useState("");
 
   
   const handleAdd = async () => {
@@ -72,7 +70,25 @@ function App() {
     }
   };
 
- 
+  
+  const messages = [
+    "Ask me anything!",
+    "What would you like to know about?",
+    "I can help with a variety of topics - try asking about science, history, or literature.",
+    "Do you need help with a specific problem or situation?",
+    "Tell me about your day - I'm here to chat!",
+    "I can also recommend books, movies, or TV shows - want a suggestion?",
+    "Curious about a particular topic? Ask me and I'll do my best to answer!",
+    "Need some advice or just want to vent? I'm here to listen.",
+    "Let's have a conversation! What's on your mind?",
+    "I can also tell jokes or fun facts - want to hear one?",
+  ];
+
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    setRandomMessage(messages[randomIndex]);
+  }, []);
+
   return (
     <>
       {showIntro ? (
@@ -119,49 +135,12 @@ function App() {
                       );
                     })
                   ) : (
-                    <p style={{ margin: "0 auto" }}>
-                      <strong>"Ask me anything!"</strong>
-                      <br />
-                      <strong>"What would you like to know about?"</strong>
-                      <br />
-                      <strong>
-                        "I can help with a variety of topics - try asking
-                        about science, history, or literature."
-                      </strong>
-                      <br />
-                      <strong>
-                        "Do you need help with a specific problem or
-                        situation?"
-                      </strong>
-                      <br />
-                      <strong>
-                        "Tell me about your day - I'm here to chat!"
-                      </strong>
-                      <br />
-                      <strong>
-                        "I can also recommend books, movies, or TV shows -
-                        want a suggestion?"
-                      </strong>
-                      <br />
-                      <strong>
-                        "Curious about a particular topic? Ask me and I'll do
-                        my best to answer!"
-                      </strong>
-                      <br />
-                      <strong>
-                        "Need some advice or just want to vent? I'm here to
-                        listen."
-                      </strong>
-                      <br />
-                      <strong>
-                        "Let's have a conversation! What's on your mind?"
-                      </strong>
-                      <br />
-                      <strong>
-                        "I can also tell jokes or fun facts - want to hear
-                        one?"
-                      </strong>
-                    </p>
+                    <>
+                   <p className="centered-messages">{randomMessage}</p>
+
+                    </>
+                    
+                   
                   )}
                   <div ref={messageEnd} />
                 </div>

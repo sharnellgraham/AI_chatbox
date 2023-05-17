@@ -50,7 +50,9 @@ ul.chatContainer {
   height: 150px;
   bottom: -50px;
 }
-
+.centered-messages {
+  text-align: center;
+}
 /* Chat Styles */
 .apiApp {
   width: 100%;

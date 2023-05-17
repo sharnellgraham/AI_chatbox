@@ -2,7 +2,7 @@
 
 Chatbox is a web application that allows users to have conversations with an AI assistant in real-time. The application provides a user-friendly interface where users can enter their messages and receive responses from the assistant. This README provides an overview of the code and instructions for running the application.
 
-![Alt Text](https://i.ibb.co/wrw0QmR/Screen-Shot-2023-05-15-at-5-56-22-PM.png)
+
 
 
 ## Technologies Used
@@ -54,12 +54,12 @@ Contributions are welcome! If you would like to contribute to the project, pleas
 5. Push to the branch: `git push origin feature/your-feature-name`.
 6. Submit a pull request.
 
-## License
 
-[Insert license information here]
+
+
 
 ## Contact
 
-For any questions or feedback regarding the Chatbox application, please contact [insert contact information].
+For any questions or feedback regarding the Chatbox application, please contact sharnellggraham@gmail.com
 
 Feel free to update the sections and add any other relevant information to the README based on your specific application requirements.

@@ -50,12 +50,10 @@ Contributions are welcome! If you would like to contribute to the project, pleas
 5. Push to the branch: `git push origin feature/your-feature-name`.
 6. Submit a pull request.
 
-## License
 
-[Insert license information here]
 
 ## Contact
 
-For any questions or feedback regarding the Chatbox application, please contact [insert contact information].
+For any questions or feedback regarding the Chatbox application, please contact sharnellggraham@gmail.com 
 
 Feel free to update the sections and add any other relevant information to the README based on your specific application requirements.

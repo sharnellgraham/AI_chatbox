@@ -87,7 +87,7 @@ function App() {
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * messages.length);
     setRandomMessage(messages[randomIndex]);
-  }, []);
+  }, [messages]);
 
   return (
     <>

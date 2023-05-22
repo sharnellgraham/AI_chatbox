@@ -51,8 +51,28 @@ ul.chatContainer {
   bottom: -50px;
 }
 .centered-messages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  animation: slide-in 1s ease-in-out;
+
 }
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Chat Styles */
 .apiApp {
   width: 100%;
